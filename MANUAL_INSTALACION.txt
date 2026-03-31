@@ -1,0 +1,297 @@
+# 🚀 SISTEMA DE GESTIÓN DE COBERTURAS PEMEX - AKAL C
+## Manual de Instalación y Uso
+
+---
+
+## 📦 ARCHIVOS INCLUIDOS
+
+### Para los Funcionarios:
+- **app_funcionario_akal_c.html** - App principal para gestionar plazas y coberturas
+- **datos_akal_c.json** - Datos iniciales (81 trabajadores + 62 plazas ROL B-2)
+
+### Para Google Sheets (Opcional):
+- **PERSONAL_GLOBAL.csv** - Base de datos de los 81 trabajadores
+- **AKAL_C_PLAZAS.csv** - Base de datos de las 62 plazas
+- **HISTORIAL.csv** - Template para historial de cambios
+
+### Extras:
+- **app_generador.html** - Generador de reportes mensuales con calendario 14/14
+
+---
+
+## ⚡ INSTALACIÓN RÁPIDA (10 FUNCIONARIOS)
+
+### PASO 1: Descargar Archivos
+Cada funcionario descarga:
+1. `app_funcionario_akal_c.html`
+2. `datos_akal_c.json`
+
+### PASO 2: Poner Archivos Juntos
+**IMPORTANTE:** Ambos archivos deben estar en la MISMA carpeta:
+```
+📁 Mis Documentos/
+  └─ 📁 PEMEX_Coberturas/
+     ├─ app_funcionario_akal_c.html
+     └─ datos_akal_c.json
+```
+
+### PASO 3: Abrir la App
+- Hacer **doble click** en `app_funcionario_akal_c.html`
+- Se abre en el navegador (Chrome, Edge, Firefox)
+
+### PASO 4: Configurar
+Al abrir por primera vez:
+1. Click en **"⚙️ Configuración"**
+2. Completar:
+   - **Plataforma:** Akal-C (ya viene por defecto)
+   - **Rol(es):** B-1, B-2 (o los que te correspondan)
+   - **Tu nombre:** Juan Pérez
+3. Click en **"💾 Guardar"**
+
+### PASO 5: ¡Listo!
+Ya puedes usar la app. Los datos se guardan automáticamente en tu navegador.
+
+---
+
+## 🎯 FUNCIONES PRINCIPALES
+
+### 1. DASHBOARD 📊
+- Ver resumen rápido:
+  - Total plazas
+  - Ausencias activas
+  - Cubiertas
+  - Pendientes
+- Ver plazas sin cubrir (urgentes)
+
+### 2. GESTIÓN DE PLAZAS 🏢
+
+#### Agregar Nueva Plaza:
+1. Tab **"🏢 Plazas"**
+2. Click **"➕ Nueva Plaza"**
+3. Llenar formulario:
+   - No.
+   - Número de Plaza
+   - Departamento
+   - **ROL** (B-1, B-2, C-1, C-2, etc.)
+   - Ficha Titular
+   - Nombre Titular
+   - Categoría
+4. **"💾 Guardar"**
+
+#### Editar Plaza:
+1. Buscar la plaza en la tabla
+2. Click en botón **"✏️"**
+3. Modificar datos
+4. **"💾 Guardar"**
+
+#### Eliminar Plaza:
+1. Click en botón **"🗑️"**
+2. Confirmar
+
+#### Gestionar Cobertura:
+1. Click en botón **"🔧"**
+2. Seleccionar tipo de ausencia:
+   - COM. SIND. (711)
+   - VAC. (Vacaciones)
+   - ASC. (Ascenso)
+   - PEND. REAN.
+   - Otro
+3. Agregar observaciones (opcional)
+4. **Buscar trabajador** para asignar cobertura:
+   - Escribir nombre o ficha (mínimo 2 letras)
+   - Aparecen resultados
+   - Click en el trabajador correcto
+5. **"💾 Guardar"**
+
+### 3. GESTIÓN DE PERSONAL 👥
+
+#### Agregar Nuevo Trabajador:
+1. Tab **"👥 Personal"**
+2. Click **"➕ Nuevo Trabajador"**
+3. Llenar:
+   - Ficha
+   - Nombre Completo
+   - Situación Contractual
+   - Situación Sindical (PS, PST, RD, TSL, TS)
+4. **"💾 Guardar"**
+
+#### Editar/Eliminar:
+- Botón **"✏️"** para editar
+- Botón **"🗑️"** para eliminar
+
+### 4. REPORTES 📈
+
+#### Exportar Reporte Mensual:
+1. Tab **"📈 Reportes"**
+2. Click **"📥 Exportar Reporte Mensual (JSON)"**
+3. Se descarga archivo:
+   ```
+   reporte_Akal-C_B-2_2026-03-31.json
+   ```
+4. **Enviar este archivo al jefe**
+
+---
+
+## 🔍 BÚSQUEDAS
+
+En **Plazas** y **Personal**:
+- Usar la barra de búsqueda 🔍
+- Escribe: número, nombre, departamento, ficha
+- Filtra automáticamente mientras escribes
+
+---
+
+## 💾 DATOS Y RESPALDOS
+
+### ¿Dónde se guardan los datos?
+- **Localmente en tu navegador** (localStorage)
+- Cada funcionario tiene su propia copia
+- NO se comparten automáticamente entre funcionarios
+
+### ¿Cómo respaldar?
+**Opción 1 - Exportar JSON:**
+- Tab "Reportes" → "📥 Exportar Reporte"
+- Guardar el archivo en lugar seguro
+- Enviar al jefe al final del mes
+
+**Opción 2 - Copiar la carpeta completa:**
+- Copiar toda la carpeta `PEMEX_Coberturas`
+- Pegar en USB o Drive
+
+### ¿Cómo restaurar datos?
+Si borras el navegador o cambias de computadora:
+1. Copia la carpeta `PEMEX_Coberturas` completa
+2. Pégala en la nueva computadora
+3. Abre `app_funcionario_akal_c.html`
+
+**NOTA:** Los datos están en el navegador, NO en el archivo HTML.
+
+---
+
+## 🔄 FLUJO DE TRABAJO MENSUAL
+
+### DÍA A DÍA (Funcionario):
+1. Abrir app
+2. Registrar ausencias nuevas
+3. Asignar coberturas
+4. Cerrar app (guarda automático)
+
+### FIN DE MES:
+1. Tab "Reportes"
+2. Click "📥 Exportar Reporte"
+3. Enviar archivo JSON al jefe por:
+   - Email
+   - USB
+   - Carpeta compartida
+
+### JEFE:
+1. Recibe 10 archivos JSON (1 de cada funcionario)
+2. Abre dashboard consolidado (próximamente)
+3. Ve estadísticas globales
+4. Exporta reporte ejecutivo
+
+---
+
+## ❓ PREGUNTAS FRECUENTES
+
+### ¿Funciona sin internet?
+**SÍ** - 100% offline. NO necesita conexión.
+
+### ¿Varios funcionarios pueden usar la misma app?
+**NO** - Cada uno necesita su copia. Los datos son locales por persona.
+
+### ¿Se puede usar en el celular?
+**SÍ** - Se adapta a pantallas chicas, pero es más cómodo en computadora.
+
+### ¿Qué navegador usar?
+- Chrome ✅ (recomendado)
+- Edge ✅
+- Firefox ✅
+- Safari ⚠️ (puede tener problemas con localStorage)
+
+### ¿Se pierden los datos si cierro el navegador?
+**NO** - Los datos quedan guardados en localStorage.
+
+### ¿Se pierden los datos si actualizo la app?
+**NO** - Puedes reemplazar el archivo HTML sin perder datos.
+
+### ¿Cómo agregar más trabajadores después?
+1. Tab "Personal"
+2. Click "➕ Nuevo Trabajador"
+3. Llenar formulario
+4. Guardar
+
+### ¿Cómo agregar plazas de otros roles?
+1. Tab "Plazas"
+2. Click "➕ Nueva Plaza"
+3. En el campo **"ROL"** seleccionar: C-1, D-2, J-1, etc.
+4. Llenar resto del formulario
+5. Guardar
+
+---
+
+## ⚠️ IMPORTANTE
+
+### ✅ HACER:
+- Respaldar datos cada semana
+- Exportar reporte al final del mes
+- Mantener datos actualizados
+- Usar siempre el mismo navegador
+
+### ❌ NO HACER:
+- Borrar caché del navegador sin respaldar
+- Usar varios navegadores (datos no se comparten)
+- Cerrar ventanas de "actualización" sin leer
+
+---
+
+## 🆘 SOPORTE
+
+Si algo no funciona:
+1. Cierra y vuelve a abrir el navegador
+2. Verifica que `datos_akal_c.json` esté en la misma carpeta
+3. Intenta con otro navegador (Chrome recomendado)
+4. Como último recurso: borra datos del navegador y vuelve a empezar
+
+---
+
+## 📞 CONTACTO
+
+Para dudas técnicas o mejoras:
+- Contactar al administrador del sistema
+- Reportar bugs o sugerencias
+
+---
+
+## 🎓 CAPACITACIÓN
+
+**Tiempo estimado para dominar el sistema:** 15-30 minutos
+
+**Recursos:**
+- Este manual (leerlo completo)
+- Probar con datos de prueba
+- Exportar reporte de prueba
+
+**Tips:**
+- Practicar buscar plazas
+- Practicar asignar coberturas
+- Familiarizarse con los filtros
+
+---
+
+## 🚀 PRÓXIMAS VERSIONES
+
+En desarrollo:
+- ✅ Dashboard consolidado para el jefe
+- ✅ Exportar a Excel
+- 🔄 Sincronización con Google Sheets (opcional)
+- 📱 App móvil nativa
+- 📊 Gráficas avanzadas
+- 🔔 Notificaciones de plazas pendientes
+
+---
+
+**Versión:** 1.0
+**Fecha:** Marzo 2026
+**Plataforma:** Akal-C
+**Creado para:** PEMEX - Región Marina Noreste
