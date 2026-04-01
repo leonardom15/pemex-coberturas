@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Coberturas PEMEX</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container { max-width: 800px; width: 100%; }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 { color: #1e293b; font-size: 2.5em; margin-bottom: 16px; }
+        .subtitle { color: #64748b; font-size: 1.2em; margin-bottom: 48px; }
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 8px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+        .btn-secondary { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 48px 0;
+            text-align: left;
+        }
+        .feature {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        .feature-icon { font-size: 2em; margin-bottom: 8px; }
+        .feature h3 { color: #1e293b; margin-bottom: 8px; }
+        .feature p { color: #64748b; font-size: 0.9em; }
+        .logo { font-size: 4em; margin-bottom: 16px; }
+        .footer {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">🏢</div>
+            <h1>Sistema de Coberturas PEMEX</h1>
+            <p class="subtitle">Gestión de Personal y Plazas Offshore</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Gestión de Personal</h3>
+                    <p>Catálogo completo de trabajadores con CRUD</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Múltiples Instalaciones</h3>
+                    <p>Maneja Akal-C, Akal-B, Ku-Maloob y más</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Reportes Automáticos</h3>
+                    <p>Estadísticas y exportación mensual</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Sistema 14/14</h3>
+                    <p>Integrado con calendario de rotaciones</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 32px;">
+                <a href="app.html" class="btn">🚀 Abrir Sistema</a>
+                <a href="MANUAL_INSTALACION.txt" class="btn btn-secondary">📖 Manual</a>
+            </div>
+
+            <div class="footer">
+                <p><strong>PEMEX</strong> - Región Marina Noreste</p>
+                <p>Sistema de Gestión de Coberturas v2.0 | Marzo 2026</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
